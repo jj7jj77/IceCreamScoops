@@ -63,7 +63,6 @@ public class JScoops extends JFrame implements ActionListener
     public void actionPerformed(ActionEvent e)
     { 
        Object source  = e.getSource();
-<<<<<<< HEAD
  	if(SmallScoopsSize.isSelected()) {
         totalPrice += LikeItScoopsPrice;
 	}
@@ -77,31 +76,6 @@ public class JScoops extends JFrame implements ActionListener
 	totalPrice += GottaHaveItScoopsPrice;
 	}
 	Price.setText("$" + totalPrice);
-=======
-       int select = e.getModifiers();
-       //Scoop Prices
-        if(source == SmallScoopsSize)
-            if(select == ActionEvent.SHIFT_MASK)
-                totalPrice += LikeItScoopsPrice;
-            else 
-                totalPrice -= LikeItScoopsPrice;
-        /*else if(e.getSource()== MediumScoopsSize)
-            if(select == ActionEvent.SHIFT_MASK)
-                totalPrice += LoveItScoopsPrice;
-            else
-                totalPrice -= LoveItScoopsPrice;
-        else if(e.getSource() == LargeScoopsSize) 
-            if(select == ActionEvent.SHIFT_MASK)
-                totalPrice += WantItScoopsPrice;
-            else
-                totalPrice -= WantItScoopsPrice;
-        else if (e.getSource() == ExtraLargeScoopsSize) 
-            if(select == ActionEvent.SHIFT_MASK)
-                totalPrice += GottaHaveItScoopsPrice;
-        else
-                totalPrice -= GottaHaveItScoopsPrice;*/
-        Price.setText("$" + totalPrice);
->>>>>>> 602b9356c547b846ddb4210ec1bc6e26910c3196
     }
 
 public static void main(String[] args) 
