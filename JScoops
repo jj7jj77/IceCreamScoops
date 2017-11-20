@@ -1,3 +1,16 @@
+/*
+
+Write a Java GUI application for an ice-cream parlor. 
+The user picks how many scoops he wants ($2.00 per scoop),
+Picks a flavor from a list (or Radio Buttons), and choose 
+which topping he wants ($0.50 per topping). 
+The program has a "Buy" button,which when clicked displays 
+his order details, and how much it costs. 
+Include at least one picture of ice cream. 
+You can also experiment with color in your GUI.
+
+*/
+
 
 import java.awt.*;
 import javax.swing.*;
