@@ -17,7 +17,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.event.ActionListener;
         
-public class JScoops  extends JFrame implements ActionListener
+public class JScoops extends JFrame implements ActionListener
 {
    //Ice Cream Scoop Sizes  //boxes
     final double LikeItScoopsPrice = 2.00;
@@ -70,7 +70,7 @@ public class JScoops  extends JFrame implements ActionListener
                 totalPrice += LikeItScoopsPrice;
             else 
                 totalPrice -= LikeItScoopsPrice;
-        else if(e.getSource()== MediumScoopsSize)
+        /*else if(e.getSource()== MediumScoopsSize)
             if(select == ActionEvent.SHIFT_MASK)
                 totalPrice += LoveItScoopsPrice;
             else
@@ -84,7 +84,7 @@ public class JScoops  extends JFrame implements ActionListener
             if(select == ActionEvent.SHIFT_MASK)
                 totalPrice += GottaHaveItScoopsPrice;
         else
-                totalPrice -= GottaHaveItScoopsPrice;
+                totalPrice -= GottaHaveItScoopsPrice;*/
         Price.setText("$" + totalPrice);
     }
     
