@@ -1,10 +1,23 @@
+/*
+
+Write a Java GUI application for an ice-cream parlor. 
+The user picks how many scoops he wants ($2.00 per scoop),
+Picks a flavor from a list (or Radio Buttons), and choose 
+which topping he wants ($0.50 per topping). 
+The program has a "Buy" button,which when clicked displays 
+his order details, and how much it costs. 
+Include at least one picture of ice cream. 
+You can also experiment with color in your GUI.
+
+*/
+
 
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.event.ActionListener;
         
-public class JScoops  extends JFrame implements ActionListener
+public class JScoops extends JFrame implements ActionListener
 {
    //Ice Cream Scoop Sizes  //boxes
     final double LikeItScoopsPrice = 2.00;
@@ -50,6 +63,7 @@ public class JScoops  extends JFrame implements ActionListener
     public void actionPerformed(ActionEvent e)
     { 
        Object source  = e.getSource();
+<<<<<<< HEAD
  	if(SmallScoopsSize.isSelected()) {
         totalPrice += LikeItScoopsPrice;
 	}
@@ -63,6 +77,31 @@ public class JScoops  extends JFrame implements ActionListener
 	totalPrice += GottaHaveItScoopsPrice;
 	}
 	Price.setText("$" + totalPrice);
+=======
+       int select = e.getModifiers();
+       //Scoop Prices
+        if(source == SmallScoopsSize)
+            if(select == ActionEvent.SHIFT_MASK)
+                totalPrice += LikeItScoopsPrice;
+            else 
+                totalPrice -= LikeItScoopsPrice;
+        /*else if(e.getSource()== MediumScoopsSize)
+            if(select == ActionEvent.SHIFT_MASK)
+                totalPrice += LoveItScoopsPrice;
+            else
+                totalPrice -= LoveItScoopsPrice;
+        else if(e.getSource() == LargeScoopsSize) 
+            if(select == ActionEvent.SHIFT_MASK)
+                totalPrice += WantItScoopsPrice;
+            else
+                totalPrice -= WantItScoopsPrice;
+        else if (e.getSource() == ExtraLargeScoopsSize) 
+            if(select == ActionEvent.SHIFT_MASK)
+                totalPrice += GottaHaveItScoopsPrice;
+        else
+                totalPrice -= GottaHaveItScoopsPrice;*/
+        Price.setText("$" + totalPrice);
+>>>>>>> 602b9356c547b846ddb4210ec1bc6e26910c3196
     }
 
 public static void main(String[] args) 
